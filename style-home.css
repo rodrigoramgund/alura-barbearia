@@ -1,0 +1,65 @@
+body {
+    
+}
+
+#titulo-principal {
+    padding-left: 20px; /* espaçamento interno para a ESQUERDA do titulo */
+}
+
+#banner {
+    width: 100%;
+}
+
+.principal {
+    background: #CCCCCC;
+    padding: 30px; /* espaçamento interno para todos os lados da div */
+}
+
+.titulo-centralizado {
+    text-align: center
+}
+
+p {
+    text-align: center;
+}
+
+#missao {
+    font-size: 20px
+}
+
+em strong {
+    color: red;
+}
+
+.beneficios {
+    background-color: white;
+    padding: 20px; /* espaçamento interno para todos os lados na lista */
+}
+
+ul {
+    display: inline-block; /* ocupa só o tamanho do conteudo, mas deixa mexer na largura e espaçamento */
+    vertical-align: top; /* alinha a lista pela linha de cima */
+    width: 20%;
+    margin-right: 15%; /* espaçamento externo para a direita */
+}
+
+.itens {
+    font-style: italic;
+}
+
+.imagembeneficios {
+    width: 50%;
+}
+
+footer {
+    text-align: center;
+    background: url(imagens/bg.jpg); /* bg url pega a imagem e multiplica na caixa */
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.copyright {
+    color: white;
+    font-size: 13px;
+    margin: 18px 0 0;
+}

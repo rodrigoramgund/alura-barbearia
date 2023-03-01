@@ -1,0 +1,345 @@
+/* ANOTAÇÕES
+main > p { podemos selecionar os FILHOS DIRETOS de <main>, para tanto, utilizaremos o sinal >, e todo os outros parágrafos serão ignorados, afinal são filhos diretos da <section> e não de <main>.
+    background: red; 
+} 
+
+img + p { selecionar o PRIMEIRO parágrafo que sucede uma imagem
+    background: blue;
+
+img ~ p { Para selecionar TODOS os parágrafos localizados depois de uma imagem usamos o seleto
+    background: yellow
+} 
+
+.principal p:not(#missao) { EXCLUIR itens específicos. Se quisermos excluir todos os parágrafos que não compõe a ID missao
+    background: orange;
+}
+
+*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0; /* espaçamento interno */
+}
+
+.caixa {
+    width: 940px; /* largura de 940px é uma largura padrao da web */
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px; /* margin pra esquerda entre os itens da lista */
+}
+
+nav a {
+    text-transform: uppercase; /* transforma todo o texto em MAIUSCULO */
+    color: #000000;
+    font-weight: bold; /* largura da fonte em negrito */
+    font-size: 22px;
+    text-decoration: none; /* tira o sublinhado do padrao */
+    transition: 0.15s color;
+}
+
+nav a:hover /* quando o mouse estiver por cima dos links da barra de nav */ {
+    color: rgb(139, 102, 8);
+    text-decoration: underline;
+}
+
+/* CSS da pag inicial */
+
+.banner {
+    width: 100%;
+    box-shadow: 3px 3px 8px 0px rgba(50, 50, 50, 0.75);
+}
+
+.principal {
+    padding: 3em 0;
+    background-color: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em; /* 2em é 2x o tamanho padrao da fonte base */
+    margin: 0 0 1em;
+    clear: left; /* limpa o float  */
+}
+
+/* .titulo-principal::first-letter { /* 1a letra em negrito
+    font-weight: bold;
+} */
+
+.img-utensilios {
+    width: 120px;
+    float: left; /* Tanto o float:left quanto o float: right servem para que o elemento se destaque na tela, deixe de ocupar o espaço em que estava, para que os outros elementos possam se posicionar ao redor dele */
+    margin: 0 20px 20px 0;
+    box-shadow: 3px 3px 8px 0px rgba(50, 50, 50, 0.75);
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+    box-shadow: 3px 3px 8px 0px rgba(50, 50, 50, 0.75);
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background-color: #888888;
+    box-shadow: 3px 3px 8px 0px rgba(50, 50, 50, 0.75);
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5; /* espaçamento entre as linhas */
+}
+
+.itens:before {
+    content: "★";
+}
+
+.itens:first-child { /* marcação pro primeiro item da lista, atraves do pseudo elemento :first-child */
+    font-weight: bold;
+}
+
+.imagem-beneficios {
+    width: 60%;
+    transition: 200ms;
+    box-shadow: 3px 3px 8px 0px rgba(50, 50, 50, 0.75);
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.7;
+}
+
+.video {
+    /* justify-content: center; */
+    width: 270px;
+    margin: 2em auto;
+    box-shadow: 3px 3px 8px 0px rgba(50, 50, 50, 0.75);
+}
+
+/*  */
+
+main {
+    /* width: 940px;
+    margin: 0 auto; */
+}
+
+/* main centralizado {
+    width: 940px;
+    margin: 0 420px;
+    /* display:flex; 
+    justify-content:center;
+    align-items:center;
+} */
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+li h2 {
+    padding: 20px 20px;
+}
+
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%; /* largura ser 1/3 */
+    vertical-align: top; /* conteudo se alinhar pela linha de cima */
+    /* background: #CCCCCC; */
+    margin: 0 1.5%;
+    box-sizing: border-box;
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    /* border: 2px solid #000000; */
+    border-radius: 10px;
+}
+
+.produtos li:hover {
+    border-color: darkgoldenrod; /* muda a cor da borda quando passa o mouse (hover */
+}
+
+.produtos li:active /* active é quando clica */ {
+    border-color: green; 
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produtos li:hover h2 /* quando passa o mouse no titulo da caixa da li */{
+    font-size: 32px; /* a fonte do h2 passa a ser 32px */
+}
+
+.produto-descricao {
+    font-size: 18px;
+    padding: 20px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, legend, .table-p {
+    display: block; /* ficam quebrados em bloco */
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.input-padrao /* criamos uma class input padrao para apenas os 4 primeiros campos */ {
+    display: block;
+    margin-bottom: 20px;
+    padding: 5px 55px 5px 4px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0px;
+}
+
+.enviar {
+    width: 56.5%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    background: orange;
+    color: white;
+    border: none; /* sem a borda padrao do submit */
+    border-radius: 6px;
+    transition: 0.3s background-color; /* transição de cor do botao para o bgc do hover */
+}
+.enviar:hover {
+    background-color: darkorange;
+    cursor: pointer; 
+}
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead {
+    background-color: #555555;
+    color: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px 10px;
+}
+.margem-left, .table-p{
+    margin-left: 40px;
+}
+
+footer {
+    text-align: center;
+    background: url(imagens/bg.jpg); /* bg url pega a imagem e multiplica na caixa */
+    padding-top: 25px;
+    padding-bottom: 30px;
+    box-shadow: -1px -1px 8px 0px rgba(50, 50, 50, 0.7);
+}
+
+.copyright {
+    color: white;
+    font-size: 13px;
+    margin: 18px 0 0;
+}
+
+@media screen and (max-width: 940px) {
+
+    nav {
+        position: static;
+        text-align: center;
+    }
+    nav a {
+        width: 90%;
+        /* position: static; */
+        margin: 0;
+        display: inline;
+        font-size: 20px;
+        text-align: center;
+    }
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo {
+        width: auto;
+    }
+    .principal > p, .lista-beneficios, .imagem-beneficios {
+        width: 90%;
+        padding-left: 5%;
+    }
+    .video {
+        width: 90%;
+    }
+    h1 {
+        text-align: center;
+    }
+    .produtos {
+        width: auto;
+    }
+    .produtos li {
+        width: 80%;
+        margin: 7px 25px 7px 40px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form, .table-p, table {
+        width: auto;
+        margin: 40px 0 40px 15px;
+    }
+    /* .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    } */
+}

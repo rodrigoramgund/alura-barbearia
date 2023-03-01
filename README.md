@@ -1,0 +1,1 @@
+Webpage desenvolvida durante o curso de HTML e CSS para iniciantes da Alura. Neste projeto foi desenvolvido uma tela Home com nav bar, mapa, imagens, vídeo, rodapé, uma tela de Produtos e uma tela de Contato para envio de formulário.

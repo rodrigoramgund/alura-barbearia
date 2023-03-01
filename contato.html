@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contato - Danilo Barber Shop</title>
+        <link rel="stylesheet" href="reset.css"> <!-- limpa todo espaçamento de padrao, mundial! -->
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="caixa">
+                <h1>
+                    <img src="imagens/logo.png" alt="Logo da Danilo Barber Shop">
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+           <form class="margem-left" action="">
+                <label for="nomesobrenome">Nome e sobrenome: </label>
+                <input type="text" id="nomesobrenome" class="input-padrao" required placeholder="Digite seu nome e sobrenome">
+
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+                <label for="telefone">Telefone: </label>
+                <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX)XXXXX-XXXX">
+
+                <label for="mensagem">Mensagem: </label>
+                <textarea name="" id="mensagem" cols="40" rows="10" class="input-padrao" required></textarea>
+
+
+                <fieldset> <!-- o fieldset é usado dentro de um form para agrupar elementos do form que são relacionados. -->
+                    <legend>Como prefere o nosso contato?</legend> <!-- É a tag <legend> que usamos para um título de um grupo de campos em qualquer formulário. -->
+                    <label for="radio-email"><input type="radio" value="email" name="contato" id="radio-email"><!-- NAME define o grupo dos inputs, fazendo com que um sendo marcado os outros nao possam ser marcados juntos --> E-mail</input></label>
+
+                    <label for="radio-telefone"><input type="radio" value="telefone" name="contato" id="radio-telefone"> Telefone</input></label>
+
+                    <label for="radio-whatsapp"><input type="radio" value="whatsapp" name="contato" id="radio-whatsapp" checked> Whatsapp</input></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Por qual horário prefere ser atendido?</legend>
+                    <select name="turno" id="turno">
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Noite</option>
+                    </select>
+                </fieldset>
+
+                <label class="checkbox" for=""><input type="checkbox" checked>Gostaria de receber nossas novidades por e-mail?</input></label>
+
+                <label for="Enviar formulário"></label>
+                <input type="submit" value="Enviar formulário" class="enviar"> <!--  -->
+           </form>
+
+           <table class="margem-left">
+                <p class="table-p">Nosso funcionamento:</p>
+                <thead> <!-- thead cabeçalho da tabela -->
+                    <tr>
+                        <th>Dias</th>
+                        <th>Horário</th>
+                    </tr>
+                </thead>
+                <tbody> <!-- tbody corpo da tabela -->
+                    <tr>
+                        <td>Segunda a Sexta</td>
+                        <td>9h às 18h</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>9h às 16h</td>
+                    </tr>
+                </tbody>
+           </table>
+        </main>
+
+        <footer>
+            <img src="imagens/logo-branco.png" alt="Logo da Danilo Barber Shop">
+            <p class="copyright">&copy; Copyright Danilo Barber Shop - 2022</p>
+        </footer>
+    </body>
+</html>
